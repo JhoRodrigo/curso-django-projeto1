@@ -1,17 +1,6 @@
-from django.http import HttpResponse
+# https://fontawesome.com/search?m=free&s=solid%2Cregular%2Cbrands icons
 from django.shortcuts import render
 
 
 def home(request):
-    return render(request, "recipes/home.html", context={'name': 'Jonathan Rodrigo'})
-
-
-def contato(request):
-    return HttpResponse("recipes/contato.html")
-
-
-def sobre(request):
-    return HttpResponse("Sobre")
-
-
-# Create your views here.
+    return render(request, 'recipes/pages/home.html', context={'name': 'Jonathan', })
