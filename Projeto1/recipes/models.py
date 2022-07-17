@@ -28,7 +28,8 @@ class Recipe(models.Model):
         upload_to='recipes/covers/%Y/%m/%d', blank=True, default='')
     # on_delete quando apagado a união coloca ele para NULL
     category = models.ForeignKey(
-        Category, on_delete=models.SET_NULL, null=True)
+        Category, on_delete=models.SET_NULL, null=True, blank=True,
+        default=None)
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
